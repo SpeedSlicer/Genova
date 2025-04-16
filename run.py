@@ -39,6 +39,8 @@ disp.LCD_Clear()
 image_url = "image.png"  # Replace with your preferred image
 
 try:
+    LCD.LCD_Init(Lcd_ScanDir)
+    LCD.LCD_Clear()
     print("Downloading image...")
     response = requests.get(image_url)
     response.raise_for_status()
